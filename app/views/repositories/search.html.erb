@@ -8,13 +8,12 @@
 <div>
   <% if @error %>
     <p><%= @error %></p>
-  <% elsif @venues %>
+  <% elsif @repositories %>
     <ul>
-    <% @venues.each do |venue| %>
+    <% @repositories.each do |repos| %>
       <li>
-        <%= venue["name"] %><br>
-        <%= venue["location"]["address"] %><br>
-        Checkins: <%= venue["stats"]["checkinsCount"] %>
+        <%= repos["name"] %><br>
+        <%= repos["link"]["address"] %><br>
       </li>
     <% end %>
     </ul>
